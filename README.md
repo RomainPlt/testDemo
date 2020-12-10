@@ -1,5 +1,7 @@
 # testDemo
 
+Toto va à la plage et tout et tout 
+
 Builder l'appli : ./gradlew build 
 Lancer l'appli : java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 Lancer l'appli depuis docker:
