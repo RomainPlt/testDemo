@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.4'                
 services:
   demo:
     image: romainplt/demo
@@ -16,3 +16,4 @@ services:
       - SCONE_HEAP=2G
       - JAVA_TOOL_OPTIONS=-Xmx64m
       - PATH_TO_FILE=/home/romain/Documents/rest_app/secrets/
+
