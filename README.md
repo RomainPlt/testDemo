@@ -1,5 +1,9 @@
 # demo
 
+Toto va à la plage et tout et tout 
+
+Et à la peche aux moules
+
 Builder l'appli : ./gradlew build 
 Lancer l'appli : java -jar build/libs/demo-0.0.1-SNAPSHOT.jar
 Lancer l'appli depuis docker:

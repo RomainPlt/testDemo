@@ -2,22 +2,17 @@ package com.example.demo.restservice;
 
 public class Greeting {
 
-    private final long id;
-    private final String content;
+    private final String name;
     private final String question;
 
-    public Greeting(long id, String content, String question) {
-        this.id = id;
+    public Greeting( String name, String question) {
+        this.name = name;
         this.question = question;
-        this.content = content;
     }
 
-    public long getId() {
-        return id;
-    }
 
-    public String getContent() {
-        return content;
+    public String getName() {
+        return name;
     }
 
     public String getQuestion(){

@@ -1,20 +1,27 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.5.RELEASE'
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	//id 'org.springframework.boot' version '5.2.5.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
 	id 'java'
+
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
-
 repositories {
 	mavenCentral()
 }
 
 dependencies {
+	compile group: 'com.h2database', name: 'h2', version: '1.4.193'
+	//spring-boot-starter-jdbc
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+
+	//implementation 'org.springframework:spring-jdbc:5.2.5.RELEASE'
+	//implementation 'org.springframework:spring-beans:5.2.5.RELEASE'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
@@ -24,6 +31,7 @@ test {
 	useJUnitPlatform()
 }
 
+<<<<<<< HEAD
 def imageName = "nexus.iex.ec/iexec-sms"
 def trustedDockerfileName = "Dockerfile-trusted"
 def untrustedDockerfileName = "Dockerfile-untrusted"
@@ -50,6 +58,15 @@ task buildImage(type: Exec) {
 
 	description 'Building demo Docker image'
 	commandLine("sh", "-c", "docker image build -f " + trustedDockerfileName + " -t " + "romainplt/demo" + " . ")
+=======
+def trustedDockerfileName = "Dockerfile-trusted"
+def untrustedDockerfileName = "Dockerfile-untrusted"
+
+task buildImage(type: Exec) {
+
+	description 'Building demo Docker image'
+	commandLine("sh", "-c", "docker image build -f " + untrustedDockerfileName + " -t " + "romainplt/demo" + " . ")
+>>>>>>> d8e1c56f098c563d66b5e2f31410310acc3c61de
 	standardOutput = new ByteArrayOutputStream()
 
 	ext.output = {

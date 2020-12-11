@@ -1,5 +1,9 @@
 FROM adoptopenjdk/openjdk11:jdk-11.0.9_11-alpine
+<<<<<<< HEAD
 ARG JAR_FILE=target/*.jar
+=======
+ARG JAR_FILE=build/libs/*.jar
+>>>>>>> d8e1c56f098c563d66b5e2f31410310acc3c61de
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 
