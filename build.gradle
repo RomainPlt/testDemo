@@ -56,14 +56,8 @@ project.ext.getDockerImageNameFull = {
 task buildImage(type: Exec) {
 
 	description 'Building demo Docker image'
-	commandLine("sh", "-c", "docker image build -f " + trustedDockerfileName + " -t " + "romainplt/demo" + " . ")
-def trustedDockerfileName = "Dockerfile-trusted"
-def untrustedDockerfileName = "Dockerfile-untrusted"
-
-task buildImage(type: Exec) {
-
-	description 'Building demo Docker image'
 	commandLine("sh", "-c", "docker image build -f " + untrustedDockerfileName + " -t " + "romainplt/demo" + " . ")
+
 	standardOutput = new ByteArrayOutputStream()
 
 	ext.output = {
